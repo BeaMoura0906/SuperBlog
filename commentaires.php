@@ -39,7 +39,7 @@ include_once('header.php');
             ?>
             <div class="card mt-5">
                 <div class="card-header">
-                    <em>publiÃ© le <?php echo $donnees['date_creation_fr']; ?></em>
+                    <em>publié le <?php echo $donnees['date_creation_fr']; ?></em>
                 </div>
                 <div class="card-body">
                     <h5 class="card-title"><?php echo htmlspecialchars($donnees['titre']); ?></h5>

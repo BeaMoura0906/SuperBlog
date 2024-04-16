@@ -43,14 +43,10 @@ include_once('header.php');
 
             // On rÃ©cupÃ¨re les 5 derniers billets
             $req = $db->query(
-                'SELECT 
-                        id, 
-                        titre, 
-                        contenu, 
-                        DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr 
+                "SELECT id, titre, contenu, DATE_FORMAT(date_creation, '%d/%m/%Y à %Hh%imin%ss') AS date_creation_fr
                     FROM billets 
                     ORDER BY date_creation 
-                    DESC LIMIT 0, 5'
+                    DESC LIMIT 0, 5"
             );
 
             while ($donnees = $req->fetch()) {
@@ -62,7 +58,7 @@ include_once('header.php');
                     <div class="card-body">
                         <h5 class="card-title"><?php echo htmlspecialchars($donnees['titre']); ?></h5>
                         <p class="card-text"><?php echo nl2br(htmlspecialchars($donnees['contenu'])); ?></p>
-                        <a href="commentaires.php?billet=<?=$donnees['id']; ?>" class="btn btn-primary">Commentaires</a>
+                        <a href="commentaires.php?billet=<?=$donnees['id']; ?>" class="btn btn-secondary">Commentaires</a>
                     </div>
                 </div>
                 <?php

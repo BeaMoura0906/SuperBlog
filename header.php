@@ -9,7 +9,7 @@
         <ul class="navbar-nav" data-bs-theme="dark">
             <?php
                 $isConnect = false;
-                if( isset( $_SESSION['login'] ) && !$_GET['error'] ) {
+                if( isset( $_SESSION['login'] ) && empty($_GET['error']) ) {
                     $isConnect = true;
                 }
             ?>

@@ -1,14 +1,9 @@
 <?php
 
-if( strstr($_SERVER['HTTP_HOST'], '51.178.86.117') ){
-    $dbname = 'beatriz';
-    $dblogin = 'beatriz';
-    $dbpassword = 'Eg;ah9do';
-} else {
-    $dbname = 'blog';
-    $dblogin = 'root';
-    $dbpassword = '';
-}
+$dbname = 'mon_super_blog';
+$dblogin = 'root';
+$dbpassword = '';
+
 
 // Connexion à la base de donnÃ©es
 try

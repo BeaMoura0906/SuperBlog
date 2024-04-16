@@ -24,8 +24,8 @@ $login = htmlspecialchars( $_POST['login'] );
 $password = htmlspecialchars( $_POST['password'] );
 $passwordConfirm = htmlspecialchars( $_POST['passwordConfirm'] );
 
-$req = $db->prepare( 'SELECT * FROM users2 WHERE pseudo =:pseudo' );
-$req->execute( [':pseudo'=>$login] );
+$req = $db->prepare( 'SELECT * FROM users WHERE login =:login' );
+$req->execute( [':login'=>$login] );
 if( $req->rowCount() ) {
     header( 'Location: createUserStep1.php?pseudo=1' );
     die();
@@ -49,10 +49,10 @@ $passHash = sodium_crypto_pwhash_str(
 );
 
 $req = $db->prepare( 
-    "INSERT INTO users2( pseudo, password ) VALUES ( :pseudo, :password )"
+    "INSERT INTO users( login, password ) VALUES ( :login, :password )"
  );
 $isInsertOk = $req->execute([
-    ':pseudo'   => $login,
+    ':login'   => $login,
     ':password' => $passHash
  ]);
  if( !$isInsertOk ) {

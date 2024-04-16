@@ -19,10 +19,10 @@ include_once( 'header.php')
 <?php
 $errorMessage  = '';
 if( isset( $_GET['pseudo'] ) ) {
-    $errorMessage = 'Désolé ! ce pseudo est déjà utilisé.';
+    $errorMessage = 'Désolé ! Ce pseudo est déjà utilisé.';
 }
 if( isset( $_GET['invalidpass'] ) ) {
-    $errorMessage = 'Désolé ! Mot de passe invalide.';
+    $errorMessage = 'Désolé ! Mot de passe invalide. Il doit contenir au moins 8 caractères';
 }
 if( isset( $_GET['invalidconfirm'] ) ) {
     $errorMessage = 'Erreur sur la confirmation du mot de passe';
