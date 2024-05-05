@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <header>
     <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
@@ -8,13 +11,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav" data-bs-theme="dark">
             <?php
-                $isConnect = false;
-                if( isset( $_SESSION['login'] ) && empty($_GET['error']) ) {
-                    $isConnect = true;
-                }
-            ?>
-            <?php
-            if( $isConnect ) {
+            if( isset( $_SESSION['login'] ) ) {
             ?>
             <li class="nav-item">
                 <a class="nav-link" href="logout.php">Se déconnecter</a>
@@ -35,5 +32,4 @@
         </div>
     </div>
     </nav>
-
 </header>

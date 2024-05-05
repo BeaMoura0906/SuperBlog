@@ -14,7 +14,7 @@ if( isset( $_POST['login'] ) && isset( $_POST['password'] ) ) {
             header('Location:index.php?error=0');
             die;
         } else {
-            header('Location:login.php?error=1&passerror=1&login='.$login);
+            header('Location:login.php?error=1&passerror=1');
             die;
         }
     } else {

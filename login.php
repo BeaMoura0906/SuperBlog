@@ -18,10 +18,6 @@ if( isset( $_GET['error'] ) ) {
     }
     if( isset( $_GET['passerror'] ) ) {
         $mess = 'Erreur : Votre mot de passse est non valide !';
-        if( isset( $_SESSION['login'] ) ) {
-            $login = $_SESSION['login'];
-            session_destroy();
-        }
     }
 }
 ?>
@@ -31,14 +27,12 @@ if( isset( $_GET['error'] ) ) {
 include_once('header.php');
 ?>
 
-<div class="row justify-content-center">
-    <div class="col-9 mt-3">
-        <h5>Se connecter</h5>
-    </div>
-</div>
-
 <section class="container mt-5">
-
+    <div class="row">
+        <div class="col-12 mb-3">
+            <h3>Se connecter</h3>
+        </div>
+    </div>
     <?php
     if( isset( $_GET['error'] ) ) {
         echo '<div class="row"><p class="col-10 alert alert-danger">' . $mess .'</p></div>';
@@ -51,7 +45,7 @@ include_once('header.php');
                 <div class="mb-3 row">
                     <label for="login" class="col-sm-2 col-form-label">Login</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" id="login" value="<?=$login?>" placeholder="Votre login" name="login" required>
+                        <input type="text" class="form-control" id="login" value="" placeholder="Votre login" name="login" required>
                     </div>
                 </div>
                 <div class="mb-3 row">
@@ -63,7 +57,7 @@ include_once('header.php');
 
                 <div class="mb-3 row justify-content-end">
                     <div class="col-sm-4">
-                        <button type="submit" class="btn btn-primary mb-3">OK</button>
+                        <button type="submit" class="btn btn-primary mb-3">Suivant</button>
                     </div>
                 </div>
 

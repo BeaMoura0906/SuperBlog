@@ -30,13 +30,12 @@ if( isset( $_GET['invalidconfirm'] ) ) {
 
 ?>
 
-<div class="row justify-content-center">
-    <div class="col-9 mt-3">
-        <h5>S'inscrire</h5>
-    </div>
-</div>
-
 <section class="container mt-5">
+    <div class="row">
+        <div class="col-12 mb-3">
+            <h3>S'inscrire</h3>
+        </div>
+    </div>
 
     <div class="row">
         <?php

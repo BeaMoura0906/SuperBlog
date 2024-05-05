@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<?php
-session_start();
-?>
 <html>
 <head>
     <meta charset="utf-8">
@@ -20,7 +17,7 @@ include_once('header.php');
 ?>
 
 <section class="container-fluid">
-    <?php if( $isConnect ) { ?>
+    <?php if( $_SESSION['login'] ) { ?>
     <div class="row">
         <div class="col-12 m-2">
             Bienvenue <?=$_SESSION['login'];?>

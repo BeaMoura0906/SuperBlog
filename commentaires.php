@@ -51,8 +51,14 @@ include_once('header.php');
 
     <div class="row justify-content-center mt-5">
         <div class="col-9">
-
-            <h3>Commentaires</h3>
+            <div class="row justify-content-evenly mb-3">
+                <div class="col">
+                    <h3>Commentaires</h3>
+                </div>
+                <div class="col-auto">
+                    <a href="addCommentaire.php?billet=<?=$_GET['billet']; ?>" class="btn btn-outline-primary">Ajouter un commentaire</a>
+                </div>
+            </div>
 
             <div class="list-group">
                 <?php
