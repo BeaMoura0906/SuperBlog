@@ -17,7 +17,7 @@ include_once('header.php');
 ?>
 
 <section class="container-fluid">
-    <?php if( $_SESSION['login'] ) { ?>
+    <?php if( isset($_SESSION['login']) ) { ?>
     <div class="row">
         <div class="col-12 m-2">
             Bienvenue <?=$_SESSION['login'];?>

@@ -4,7 +4,7 @@ session_start();
 if( isset( $_POST['login'] ) && isset( $_POST['password'] ) ) {
     $login = $_POST['login'];
     include_once('db.php');
-    $sql = 'SELECT * FROM users WHERE pseudo=:login';
+    $sql = 'SELECT * FROM users WHERE login=:login';
     $reponse = $db->prepare( $sql );
     $reponse->execute( [':login'=>$login] );
 
